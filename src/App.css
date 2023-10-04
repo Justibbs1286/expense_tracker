@@ -8,6 +8,80 @@
   box-sizing: border-box;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Cool infinite background scrolling animation. * Twitter: @kootoopas */
+/* Exo thin font from Google. */
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+ @-webkit-keyframes bg-scrolling-reverse {
+	 100% {
+		 background-position: 50px 50px;
+	}
+}
+ @-moz-keyframes bg-scrolling-reverse {
+	 100% {
+		 background-position: 50px 50px;
+	}
+}
+ @-o-keyframes bg-scrolling-reverse {
+	 100% {
+		 background-position: 50px 50px;
+	}
+}
+ @keyframes bg-scrolling-reverse {
+	 100% {
+		 background-position: 50px 50px;
+	}
+}
+ @-webkit-keyframes bg-scrolling {
+	 0% {
+		 background-position: 50px 50px;
+	}
+}
+ @-moz-keyframes bg-scrolling {
+	 0% {
+		 background-position: 50px 50px;
+	}
+}
+ @-o-keyframes bg-scrolling {
+	 0% {
+		 background-position: 50px 50px;
+	}
+}
+ @keyframes bg-scrolling {
+	 0% {
+		 background-position: 50px 50px;
+	}
+}
+/* Main styles */
+ body {
+	 margin-top: 13.5rem;
+	 color: #999;
+	 font: 400 10.6666666667px exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+	 text-align: center;
+	/* img size is 50x50 */
+	 background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+	 -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+	/* Safari 4+ */
+	 -moz-animation: bg-scrolling-reverse 0.92s infinite;
+	/* Fx 5+ */
+	 -o-animation: bg-scrolling-reverse 0.92s infinite;
+	/* Opera 12+ */
+	 animation: bg-scrolling-reverse 0.92s infinite;
+	/* IE 10+ */
+	 -webkit-animation-timing-function: linear;
+	 -moz-animation-timing-function: linear;
+	 -o-animation-timing-function: linear;
+	 animation-timing-function: linear;
+}
+ body::before {
+	 content: "MoneyMate";
+	 font-size: 5rem;
+   color: #52aca3b4;
+	 font-weight: 100;
+	 font-style: normal;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -20,7 +94,11 @@ body {
 
 .container {
   margin: 30px auto;
-  width: 350px;
+    width: 350px;
+    border: 1px solid gray;
+    padding: 2rem;
+    background-color: #ffffff9f;
+    border-radius: 1rem;
 }
 
 h1 {
@@ -29,7 +107,7 @@ h1 {
 }
 
 h3 {
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #52aca3;
   padding-bottom: 10px;
   margin: 40px 0 10px;
 }
@@ -57,6 +135,16 @@ h4 {
   border-right: 1px solid #dedede;
 }
 
+.blnc{
+  font-size: 1rems;
+}
+
+
+
+.blnc h1{
+  color: #52aca3af;
+}
+
 .money {
   font-size: 20px;
   letter-spacing: 1px;
@@ -77,7 +165,7 @@ label {
 }
 
 input {
-  border: 1px solid #dedede;
+  border: 1px solid rgba(128, 128, 128, 0.436);
   border-radius: 2px;
   display: block;
   font-size: 16px;
@@ -85,9 +173,13 @@ input {
   width: 100%;
 }
 
+input:focus{
+  border: 1px solid #52aca3;
+}
+
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: #52aca3cd;
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
@@ -147,3 +239,4 @@ input {
 .list li:hover .delete-btn {
   opacity: 1;
 }
+
